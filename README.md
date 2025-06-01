@@ -7,7 +7,7 @@
 
 A feature-rich digital diary system for documenting professional training, academic topics, and personal experiences with secure data storage and intuitive browsing.
 
-![Digital Diary Interface](diagram.png) <!-- Add actual screenshot later -->
+![Digital Diary Interface](screenshot%20of%20home%20page.png) <!-- Add actual screenshot later -->
 
 ## ✨ Key Features
 - **Rich Text Editor** - CKEditor with formatting tools and media support
