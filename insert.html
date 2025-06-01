@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Data Input | Diary of Day</title>
+    <link rel="stylesheet" href="css/data-upload.css">
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/cdn.jsdelivr.net_npm_flatpickr_dist_flatpickr.min.css">
+
+
+    <script src="js/flatpickr.net_npm_flatpickr.js"></script>
+    <script src="js/ajax.googleapis.com_ajax_libs_jquery_3.6.0_jquery.min.js"></script>
+    <script src="js/ckeditor/ckeditor.js"></script>
+    <script src="js/data-upload.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="login.html">Log In</a></li>
+                <li><a href="singup.html">Sing Up</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="form-container">
+            <h1>Data Input to Diary day</h1>
+            <form id="data-form">
+                <label for="today" class="input-label">Today:</label>
+            <input type="date" name="today" id="today" placeholder="yyyy-mm-dd" class="input-field">
+            <br>
+            <br>
+                <label for="description" class="input-label">Description:</label>
+                <textarea name="description" id="description"></textarea>
+                <br>
+                <input type="submit" value="Submit">
+                <input type="reset" value="Reset">
+                <div class="message-container">
+                    <span class="error-message" id="error-message"></span>
+                    <span class="success-message" id="success-message"></span>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+    CKEDITOR.replace('description',{
+    removeButtons: 'Save',
+    height: '500px'
+    });
+    document.getElementById('submit-button').addEventListener('click', function () {
+                CKEDITOR.instances.description.updateElement(); // Update the underlying textarea
+                
+                // Optional: You can add additional validation before submitting the form if needed
+                
+                document.getElementById('data-form').submit(); // Submit the form
+            });
+        });
+    
+    document.addEventListener('DOMContentLoaded', function () {
+            flatpickr('#today', {
+                dateFormat: 'Y-m-d',
+                allowInput: true
+            });
+        });
+    
+    
+    </script>
+
+</html>

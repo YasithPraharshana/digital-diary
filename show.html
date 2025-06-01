@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Digital Daily Diary</title>
+    <script src="js/ajax.googleapis.com_ajax_libs_jquery_3.6.0_jquery.min.js"></script>
+    <script src="js/flatpickr.net_npm_flatpickr.js"></script>
+
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/cdn.jsdelivr.net_npm_flatpickr_dist_flatpickr.min.css">
+    <link href="css/data-show.css" rel="stylesheet"/>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="login.html">Log In</a></li>
+                <li><a href="singup.html">Sing Up</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+    <h1>Digital Daily Diary</h1>
+    
+    <div id="range-select">
+        <p>Filter :</p>
+        <ul>
+            <li>Start Date : <input type="date" id="start-date" placeholder="(yyyy-mm-dd)"/></li>
+            <li>End Date : <input type="date" id="end-date" placeholder="(yyyy-mm-dd)"/></li>
+          <li><button id="preview">Preview</button></li>
+    </ul>
+    </div>
+    
+    <div id="records"></div>
+    <script src="js/data-show.js">
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            flatpickr('#start-date', {
+                dateFormat: 'Y-m-d',
+                allowInput: true
+            });
+
+            flatpickr('#end-date', {
+                dateFormat: 'Y-m-d',
+                allowInput: true
+            });
+        });
+    </script>
+</body>
+</html>

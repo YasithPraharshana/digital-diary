@@ -1,0 +1,79 @@
+body {
+    background-color: #fff;
+    font-family: sans-serif;
+}
+
+h1 {
+    text-align: center;
+    font-size: 1.5em;
+}
+
+div#records {
+    width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.record {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.record .date {
+    font-weight: bold;
+}
+
+.record .description {
+    font-size: 1em;
+}
+
+.week {
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+}
+
+#range-select {
+    padding: 20px;
+    margin-left: 3vw;
+    width: 55vw;
+    border: 1px solid #ccc;
+}
+
+#range-select ul li{
+    display: inline;
+}
+
+#refreshing-time, #start-date, #end-date{
+    width: 15vw;
+    height: 3vh;
+    border-radius: 15px;
+    border: 1px solid #333;
+    padding: 5px;
+    padding-left: 10px;
+    transition: 0.3s;
+}
+
+#refreshing-time:hover, #start-date:hover, #end-date:hover{
+    box-shadow: 1px 1px 10px #333;
+}
+
+#preview{
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    border-radius: 15px;
+    transition: 0.3s;
+    border: 1px solid #333;
+    cursor: pointer;
+}
+
+#preview:hover{
+    padding-left: 17px;
+    padding-right: 17px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    opacity: 0.7;
+    box-shadow: 1px 1px 10px #333;
+}
