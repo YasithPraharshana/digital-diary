@@ -1,4 +1,4 @@
-# 📓 Digital Diary Web Application
+# 📓 Digital Daily Diary Web Application
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 ![GitHub repo size](https://img.shields.io/github/repo-size/YasithPraharshana/digital-diary)
